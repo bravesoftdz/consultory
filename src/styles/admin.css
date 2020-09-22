@@ -1,0 +1,234 @@
+.Container__Admin {
+    height: 100vh;
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.Modal__Container {
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    transform: translateX(0%);
+    transform: translateY(20%);
+    grid-template-columns: repeat(5,1fr);
+    box-shadow: 0 13px 27px -5px rgba(50,50,93,0.25),0 8px 16px -8px rgba(0,0,0,0.3),0 -6px 16px -6px rgba(0,0,0,0.025);;
+}
+
+.Banner__Container {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 40px;
+    display: block;
+    justify-content: center;
+    grid-column: 1/4;
+    background-image: linear-gradient(to right, #5A70E8, #3947DE, #5A70E8);;
+}
+
+.Img__Container img {
+    max-width: 90%;
+    width: 100%;
+}
+
+.Img__Container {
+    display: flex;
+    justify-content: center;
+}
+
+.Banner__Container > p {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.Info__Banner {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.Info__Banner p {
+    color: #fff;
+}
+
+.Form__Container {
+    padding: 90px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: #fff;
+    grid-column: 4/6;
+}
+
+.Form__Container h2 { 
+    color: #3F3E55;
+    line-height: 1.4;
+}
+
+.Welcome__Info {
+    margin-top: 10px;
+}
+
+.Info__Form {
+    margin-top: 30px;
+}
+
+.Info__Form p {
+    color: #3F3E55;
+    line-height: 1.6;
+}
+
+form {
+    margin-top: 40px;
+}
+
+.Input__Div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 8% 92%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.Input__Div.One {
+    margin-top: 20px;
+}
+
+.Input__Div.Two {
+    margin-bottom: 4px;
+}
+
+.Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Icon i {
+    color: #d9d9d9;
+    position: relative;
+    top: 3px;
+    transition: .3s;
+}
+
+.Input__Div > div {
+    position: relative;
+    height: 40px;
+}
+
+.Input__Div > div h5 {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 14px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.Welcome h2 {
+    font-size: 25px;
+}
+
+.Input__Div >div > input {
+    position: absolute;
+    width: 100%;
+    top: 5px;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5em 0.7rem;
+    font-size: 1rem;
+    color: #3F3E55;
+}
+
+.Btn {
+    margin-top: 40px;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px;
+    color: #fff;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #5A70E8, #3947DE, #5A70E8);
+    background-size: 200%;
+    transition: .5s;
+}
+
+.Btn:hover {
+    background-position: right;
+}
+
+.Input__Div.Focus .Icon i {
+    color: #3947DE;
+}
+
+.Input__Div.Focus div h5 {
+    top: 0px;
+    font-size: 13px;
+}
+
+.Input__Div::after, .Input__Div::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #3947DE;
+    transition: .4s;
+}
+
+.Input__Div::before {
+    right: 50%;
+}
+
+.Input__Div::after {
+    left: 50%;
+}
+
+.Input__Div.Focus::after, .Input__Div.Focus::before {
+    width: 50%;
+}
+
+@media screen and (max-width: 1280px) {
+    .Modal__Container {
+        max-width: 1000px;
+    }
+    .Banner__Container {
+        grid-column: 1/4;
+    }
+    .Form__Container {
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        grid-column: 4/6;
+    }
+    .Form__Container  {
+        padding: 35px;
+    }
+}
+
+@media screen and (max-width: 998px) {
+    .Modal__Container {
+        max-width: 500px;
+    }
+    .Banner__Container {
+        display: none;
+    }
+    .Form__Container  {
+        padding: 50px;
+        grid-column: 1/6;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .Modal__Container {
+        max-width: 350px;
+    }   
+    .Form__Container  {
+        padding: 30px;
+    }
+}

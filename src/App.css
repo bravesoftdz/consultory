@@ -1,38 +1,1153 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap');
+
+@font-face {
+  font-family: 'Nexa Bold';
+  src: url('./fonts/Nexa\ Bold.otf');
+}
+
+@font-face {
+  font-family: 'Nexa Light';
+  src: url('./fonts/Nexa\ Light.otf');
+}
+
+@font-face {
+  font-family: 'Nexa Rust Sans';
+  src: url('./fonts/NexaRustSans-Black.otf');
+}
+
+.Page__Main {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  opacity: 0;
+}
+
+.Header {
+  background: #fff;
+  border-bottom: 1px solid #f8f8f8;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.Container__Full {
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  align-items: center;
+}
+
+.Container {
+  position: relative;
+  z-index: 0;
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  align-items: flex-start;
+  grid-gap: 80px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.Container-S {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-column: 1/10;
+  grid-template-columns: repeat(8,1fr);
+  align-items: center;
+
+  grid-gap: 80px;
+}
+
+.Logo {
+  display: flex;
+  grid-column: 1/3;
+}
+
+.Nav {
+  position: relative;
+  display: flex;
+  grid-column: 3/10;
+}
+
+.Nav__Link {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.Nav a,
+.target {
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.Nav li.active a {
+  color: #025C75 !important
+}
+
+.Nav__Item {
+  margin-right: 50px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Nav__Item a {
+  text-transform: uppercase;
+  color: #025C75;
+  text-decoration: none;
+  font-family: 'Nexa Bold';
+  font-size: 14px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Banner {
+  width: 100%;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Banner img {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  max-height: 790px;
+}
+
+.Banner p {
+  margin-top: 0;
+  font-family: 'Nexa Rust Sans';
+  font-size: 50px;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 1000;
+  width: 912px;
+  color: #fff;
+  top: 100px;
+  left: 170px;
+}
+
+.slick-next {
+  display: none !important;
+}
+
+.slick-dots {
+  position: relative;
+  bottom: 30px !important;
+}
+
+.slick-dots li.slick-active button:before, .slick-dots li button:before {
+  opacity: 1 !important;
+  background: #fff !important;
+  border-radius: 50%;
+  color: #fff !important;
+}
+
+.About {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  padding-top: 100px;
+  padding-bottom: 0px;
+}
+
+.Background {
+  padding-top: 260px;
+  padding-bottom: 150px;
+}
+
+.Background::after {
+  content:'';
+  position: absolute;
+  z-index: -1;
+  top: 50px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('./images/background.png');
+}
+
+.Clients h2 {
+  margin-bottom: 0px !important;
+}
+
+.Bg__Services {
+  width: 100%;
+  height: 25vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('./images/services.png');
+}
+
+.Fz__Presentation h1 {
+  font-size: 40px !important;
+  top: 45px !important;
+}
+
+.Contact {
+  display: none;
+}
+
+.Info__Container {
+  position: relative;
+  z-index: 1;
+  grid-column: 1/4;
+}
+
+.Img__Container {
+  position: relative;
+  z-index: 1;
+  grid-column: 3/6;
+}
+
+.Info__Container.Benef {
+  position: relative;
+  z-index: 1;
+  grid-column: 6/10;
+}
+
+
+h2 {
+  color: #17A1B3;
+  position: relative;
+  z-index: 1;
+  font-size: 55px;
+  text-transform: uppercase;
+  font-family: 'Nexa Rust Sans';
+}
+
+.Services {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #E5E5E5;
+  padding-bottom: 60px;
+}
+
+.Clients__Slider {
+  padding: 10px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.Clients__Slider .slick-track {
+  display: flex !important;
+  align-items: center !important;
+  position: relative;
+  z-index: 2000;
+}
+
+.Clients__Slider img {
+   width: 65%;
+}
+
+.Clients__Slider .slick-slide {
+  text-align: -webkit-center;
+}
+
+.Relative {
+  position: relative;
+  z-index: 2000;
+}
+
+.Services h2 , .Benef h2, .Clients h2 {
+  text-align: center;
+  margin: 40px auto;
+  font-size: 30px !important;
+}
+
+.Info__Container p {
+  max-width: 402px;
+  font-family: 'Nexa Light';
+  margin-top: 60px;
+  font-size: 18px;
+  color: #545454;
+}
+
+.Info__Container.Benef p {
+  position: relative;
+  max-width: 402px;
+  font-family: 'Nexa Light';
+  margin-top: 20px;
+  left: -50px;
+  line-height: 31px;
+  font-size: 20px;
+  color: #545454;
+}
+
+
+.Video__Container {
+  position: relative;
+  z-index: 1;
+  grid-column: 4/10;
+  padding: 20px;
+}
+
+.Bg__Services h1 {
+  margin-top: 0;
+  font-size: 60px;
+  text-transform: uppercase;
+  position: relative;
+  width: 912px;
+  top: 65px;
+  color: #fff;
+  font-family: 'Nexa Rust Sans';
+  left: 180px;
+}
+
+.Row__Services {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 1440px;
+  padding-top: 50px;
+  flex-wrap: wrap !important;
 }
 
-.App-link {
-  color: #61dafb;
+.Row__Services .Service {
+  text-align: center;
+  font-family: 'Nexa Rust Sans';
+  color: #545454;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Service p {
+  width: 290px;
+  margin: 0 auto;
+  position: relative;
+  left: 30px;
+  margin-top: 20px;
+}
+
+.Service a {
+  color: #545454;
+  text-decoration: none;
+}
+
+.Service img {
+  max-width: 80%;
+}
+
+.Footer {
+  background: #545454;
+  padding: 50px;
+}
+
+.Logo__Footer {
+  grid-column: 1/5;
+  display: flex;
+  justify-content: center;
+}
+
+.About__Footer {
+  grid-column: 5/6;
+}
+
+.Benef__Footer {
+  grid-column: 6/7;
+}
+
+.Services__Footer {
+  grid-column: 7/9;
+}
+
+.Socials__Footer {
+  grid-column: 9/10;
+}
+
+.About__Footer, .Benef__Footer, .Services__Footer {
+  position: relative;
+  top: 30px;
+  font-family: 'Nexa Bold';
+}
+
+.About__Footer p, .Benef__Footer p, .Services__Footer p{
+  color: #fff;
+  font-size: 16px;
+}
+
+.About__Footer ul, .Benef__Footer ul, .Services__Footer span {
+  font-family: 'Nexa Light';
+  color: #fff;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.About__Footer li, .Benef__Footer li, .Services__Footer li{
+  margin-bottom: 20px;
+}
+
+.About__Footer li a , .Benef__Footer li a, .Services__Footer li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.Socials__Footer {
+  position: relative;
+  top: 30px;
+  display: flex;
+}
+
+.Socials__Footer i {
+  color: #545454;
+  background: #fff;
+  padding: 10px;
+  margin-left: 2px;
+  border-radius: 2px;
+}
+
+.Img__Container img {
+  max-height: 400px;
+  max-width: 100%;
+}
+
+.Benef {
+  padding-bottom: 40px;
+}
+
+.Summary {
+  overflow: hidden;
+  margin-bottom: 50px;
+  padding-top: 70px;
+}
+
+.Pdf__Container {
+  grid-column: 2/5;
+  height: 100%;
+  min-width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 0px 0px 0px 10px;
+}
+
+.Square {
+  background: rgba(23, 161, 179, 0.2);
+  position: absolute;
+  min-width: 100%;
+  top: 60px;
+  max-height: 600px
+}
+
+.Img__SummaryContainer {
+  grid-column: 5/8;
+  position: relative;
+  z-index: 0;
+  left: -80px;
+  height: 100%;
+  top: -40px;
+}
+
+
+.Img__SummaryContainer img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.Pdf__Content {
+  display: flex;
+  z-index: 100;
+  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.Pdf {
+  background: #fff;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 999999;
+  left: 50px;
+  top: -50px;
+  padding: 80px;
+}
+
+.Pdf__Info{
+  display: flex;
+  background: #fff;
+  padding: 30px 40px 0px 40px;
+  position: relative;
+}
+
+
+.Pdf__Info.Fd{
+  top: 80px;
+}
+
+.Back {
+  background: #fff;
+  position: relative;
+  top: -70px;
+  left: 50px;
+  z-index: 999999;
+}
+
+.Pdf__Link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Pdf__Link p {
+  background: #17A1B3;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  right: 50px;
+  top: -20px;
+}
+
+.Grid__Button {
+  display: grid;
+  align-items: flex-end;
+}
+
+.Button {
+  grid-column: 7/8;
+  padding: 30px;
+  left: 50px;
+}
+
+.Back button {
+  display: block;
+  border: none;
+  left: 30px;
+  position: relative;
+  background: transparent;
+  color: #17A1B3;
+  font-size: 18px;
+  font-family: 'Nexa Bold';
+  cursor: pointer;
+  outline: none;
+}
+
+.Clients__Slider .slick-dots {
+  display: none !important;
+}
+
+.Info__Summary {
+  color: #545454;
+}
+
+.Info__Summary h1 {
+  font-size: 20px;
+  font-family: 'Nexa Bold';
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.Info__Summary p {
+  font-size: 15px;
+  font-family: 'Nexa Light';
+}
+
+.Pdf_Download {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.Pdf_Download p {
+  color: #545454;
+  font-size: 20px;
+  margin-left: 20px;
+  font-family: 'Nexa Bold';
+  max-width: 434px;
+  margin-bottom: 40px;
+}
+
+.error-auth {
+  position: absolute;
+  right: 40px;
+  background: #F34F6B;
+  color: #fff;
+  top: 40px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.Img__Form {
+  display: flex;
+  grid-column: 2/5;
+}
+
+.Img__Form img {
+  width: 90%;
+}
+
+.Form {
+  display: flex;
+  grid-column: 5/8;
+}
+
+.Container__Contact {
+  padding: 40px;
+  width: 100%;
+  background: #17A1B3;
+  border-radius: 20px;
+}
+
+.Container__Contact h2 {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.input {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.Container__Contact .input input, textarea {
+  width: 100%;
+  background: #E5E5E5;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Nexa Bold';
+  padding: 15px;
+  resize: none;
+}
+
+textarea {
+  height: 160px;
+}
+
+.Container__Contact input::placeholder,
+.Container__Contact textarea::placeholder {
+  color: #C4C4C4;
+  font-family: 'Roboto';
+  font-weight: 800;
+  font-style: italic;
+}
+
+.btn-sendGmail {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-sendGmail button {
+  background: #025C75;
+  border-radius: 15px;
+  padding: 20px 40px;
+  margin-top: 10px;
+  border: none;
+  color: #Fff;
+  font-family: 'Roboto';
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none !important;
+  grid-column: 9/10;
+  outline: none !important;
+}
+
+.Image__Client {
+  outline: none;
+}
+
+@media only screen and (max-width: 1440px) {
+  .Nav__Item {
+    margin-right: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .Banner p {
+    left: 50px;
   }
+  .slick-dots {
+    bottom: 45px !important;
+  }
+  .About {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .Background::after {
+    top: 0;
+    background-position: unset;
+  }
+  .Info__Container {
+    display: flex;
+    grid-column: 2/4;
+  }
+  .Video__Container {
+    grid-column: 4/8;
+  }
+}
+
+@media only screen and (max-width: 1540px) {
+  .Summary {
+    padding-bottom: 100px;
+  }
+  .Square {
+    max-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .Form {
+    display: flex;
+    grid-column: 5/9;
+  }
+  .Square {
+    max-height: 80%;
+  }
+  .Pdf {
+    padding: 20px 40px;
+  }
+  .Nav__Item {
+    margin-right: 20px;
+  }
+  .Banner p {
+    left: 50px;
+  }
+  .slick-dots {
+    bottom: 45px !important;
+  }
+  .About {
+    padding-bottom: 0;
+    padding-top: 0px;
+  }
+  .Background::after {
+    top: 0;
+    background-position: unset;
+  }
+  .Info__Container {
+    display: flex;
+    grid-column: 2/4;
+  }
+  .Video__Container {
+    grid-column: 4/8;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .Nav__Item {
+    margin-right: 0px;
+  }
+  .Nav__Item a {
+    font-size: 12px;
+  }
+  .Banner p {
+    font-size: 45px;
+  }
+  .Img__Container {
+    grid-column: 2/6;
+  }
+  .Bg__Services h1 {
+    font-size: 50px;
+    width: 100%;
+    left: 40px;
+  }
+  .Pdf__Container {
+    grid-column: 1/5;
+  }
+  .Img__SummaryContainer {
+    grid-column: 5/9;
+  }
+  .Square {
+    background: #fff;
+    position: relative;
+  }
+  .Summary {
+    padding-bottom: 0px;
+  }
+  .Bg__Services h1 {
+    width: 800px;
+  }
+  .Container {
+    grid-gap: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .target {
+    display: none;
+  }
+  .Img__Form {
+    display: flex;
+    grid-column: 2/9;
+    margin-bottom: 50px;
+  }
+  .Form {
+    display: flex;
+    grid-column: 2/9;
+  }
+  .hamburger {
+    display: block !important;
+  }
+  .Nav__Item {
+    margin-right: 0px;
+  }
+  .Container-S {
+    grid-gap: 0px;
+  }
+  .Info__Container {
+    display: flex;
+    grid-column: 1/9;
+  }
+  .Video__Container {
+    grid-column: 1/9;
+  }
+  .Background {
+    padding-top: 60px;
+  }
+  .Logo__Footer {
+    grid-column: 1/4;
+  }
+  .About__Footer {
+    grid-column: 4/5;
+  }
+  
+  .Benef__Footer {
+    grid-column: 5/6;
+  }
+  
+  .Services__Footer {
+    grid-column: 6/9;
+  }
+  
+  .Socials__Footer {
+    grid-column: 9/10;
+  }
+  .Mobile.active {
+    position: relative;
+  }
+  .Nav {
+    display: block !important; 
+    grid-column: unset;
+    width: 100%;
+    grid-column: 1/10;
+  }
+  .Nav__Link {
+    width: 101%;
+    background: #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: translateX(-100%) !important;
+    transform: translateX(-100%) !important;
+    position: absolute;
+    left: 0;
+    display: table;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 1px 0px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 2px 0px -1px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  }
+  .Nav__Item {
+    padding: 15px 50px !important;
+  }
+  .Nav.Mobile.active .Nav__Link {
+    -webkit-transform: translateX(0%) !important;
+    transform: translateX(0%) !important;
+  }
+  .Row__Services .Service {
+    margin-bottom: 50px;
+  }
+  .Bg__Services h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 968px) {
+  .Container {
+    grid-gap: 20px;
+    overflow: visible;
+  }
+  .Info__Container p {
+    min-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .Banner p {
+    font-size: 40px;
+    max-width: 600px;
+  }
+  .Footer {
+    padding: 10px 10px 80px 10px;
+  }
+  .Logo__Footer {
+    grid-column: 1/10;
+    justify-content: center;
+  }
+  .About__Footer {
+    grid-column: 2/4;
+  }
+  
+  .Benef__Footer {
+    grid-column: 4/6;
+  }
+  
+  .Services__Footer {
+    grid-column: 6/8;
+  }
+  
+  .Socials__Footer {
+    grid-column: 8/10;
+  }
+  .Img__Container {
+    grid-column: 1/10;
+  }
+  .Info__Container.Benef {
+    grid-column: 1/10;
+    padding: 10px 20px 20px 20px;
+  }
+  .Info__Container.Benef p {
+    left: 0px !important;
+  }
+  .Summary {
+    padding-top: 0px;
+  }
+  .Bg__Services h1 {
+    width: 500px;
+    font-size: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Pdf__Container {
+    grid-column: 1/9;
+  }
+  .Pdf {
+    padding: 10px;
+    left: 0;
+    top: unset;
+    padding-bottom: 100px;
+  }
+  .Back {
+    left: 0;
+  }
+  .Info__Summary h1 {
+    font-size: 15px;
+  }
+  .Square {
+    top: 0;
+  }
+  .Container-S {
+    align-items: flex-start;
+  }
+  .Img__SummaryContainer {
+    left: 0;
+    padding: 10px;
+  }
+  .Info__Summary h1 {
+    margin-top: 0;
+  }
+  .Info__Summary p {
+    font-size: 15px !important;
+  }
+  .Services {
+    padding-bottom: 50px;
+  }
+  .Summary {
+    padding-bottom: 0;
+    overflow: unset;
+    margin-bottom: 0;
+  }
+  .Back button {
+    font-size: 14px;
+  }
+  .Button img {
+    width: 70% !important;
+  }
+  .Img__SummaryContainer {
+    grid-column: 1/9;
+  }
+  .Banner p {
+    font-size: 30px;
+    max-width: 500px;
+  }
+  .Footer {
+    padding: 0px 10px 80px 0px;
+  }
+  .Logo__Footer {
+    grid-column: 1/5;
+    justify-content: center;
+  }
+  .About__Footer {
+    grid-column: 5/8;
+  }
+  
+  .Benef__Footer {
+    grid-column: 2/5;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .Info__Container {
+    padding: 10px 40px 0px 40px;
+  }
+  .Info__Container p {
+    max-width: 768px !important;
+  }
+  .Background::after {
+    display: none;
+  }
+  .Services__Footer {
+    grid-column: 5/8;
+  }
+  .Socials__Footer {
+    grid-column: 8/10;
+  }
+  .Logo img {
+    width: 130%;
+  }
+  .Nav__Item {
+    padding: 15px 30px !important;
+  }
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    height: 2px !important;
+    width: 30px !important;
+  }
+  .Info__Container.Benef p{
+    font-size: 18px;
+  }
+  .Background {
+    padding-bottom: 50px;
+    padding-top: 50px !important;
+  }
+  .Bg__Services h1 {
+    width: 440px;
+    font-size: 30px !important;
+    left: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Form {
+    padding: 15px;
+    display: flex;
+    grid-column: 1/10;
+  }
+  .Logo__Footer {
+    grid-column: 1/10;
+    justify-content: center;
+  }
+  .About__Footer {
+    grid-column: 2/4;
+  }
+  
+  .Benef__Footer {
+    grid-column: 6/8;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .Info__Container {
+    padding: 10px 30px 0px 30px;
+  }
+  .Info__Container p {
+    width: 400px !important;
+  }
+  .Background::after {
+    display: none;
+  }
+  .Background {
+    padding-bottom: 30px;
+  }
+  .Services__Footer {
+    grid-column: 2/5;
+  }
+  .Socials__Footer {
+    grid-column: 6/10;
+  }
+  .Logo img {
+    width: 250%;
+  }
+  .Footer {
+    padding: 0px 0px 80px 0px;
+  }
+  .Bg__Services h1 {
+    width: 400px;
+    font-size: 20px !important;
+    left: 50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Banner p {
+    font-size: 25px;
+    left: 24px;
+    max-width: 300px;
+  }
+  .Logo__Footer {
+    grid-column: 1/10;
+    justify-content: center;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .Info__Container p {
+    width: 300px !important;
+  }
+  .Bg__Services h1 {
+    font-size: 30px;
+    width: 100%;
+    left: 40px;
+  }
+  .Service p {
+    left: 0;
+  }
+  .Container__Contact {
+    padding: 40px 20px 20px 20px;
+  }
+  .Container__Contact h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .Banner p {
+    font-size: 22px;
+    left: 24px;
+    max-width: 300px;
+  }
+  .Logo__Footer {
+    grid-column: 1/10;
+    justify-content: center;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  .Info__Container p {
+    width: 280px !important;
+  }
+  .Info__Container p {
+    font-size: 14px;
+  }
+  .Footer {
+    font-size: 14px !important;
+  }
+}
+
+.target {
+  position: absolute;
+  border-bottom: 2px solid transparent;
+  z-index: 1;
+}
+
+.Nav__Item a,
+.target {
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.target {
+  height: 1px !important;
+  top: 90px !important;
 }

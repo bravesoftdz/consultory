@@ -1,0 +1,174 @@
+.container-gallery_banner, .container-gallery_client {
+    padding-top: 20px;
+    margin: 0px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.header-banner, .header-client {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-banner a, .header-client a {
+    text-decoration: none;
+    color: #fff;
+    background: #F6CF19;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.banner-item, .client-item{
+    position: relative;
+}
+
+.banner-item p , .client-item p {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 250px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.banner-item img, .client-item img {
+    object-fit: cover;
+    width : 100%;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.container-new_banner , .container-new_client {
+    background: #fff;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.container-new_banner .input input, .container-new_client .input input {
+    border: 1px solid #a8a8a8;
+    background: transparent;
+    border-radius: 20px;
+    padding: 10px 15px;
+    width: 600px;
+    margin-bottom: 30px;
+    font-family: 'Nexa Bold';
+    outline: none;
+}
+
+.img-product {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.img-product .thumbail {
+    position: relative;
+    text-align: center;
+    margin: 40px auto;
+    height: 500px;
+    max-width: 900px;
+}
+
+.img-product .thumbail img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.img-product input.hidden {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.btn-save {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn-save button {
+    color: #fff;
+    background: #F6CF19;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.delete-banner, .edit-banner , .delete-client , .edit-client{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    color: #fff;
+    opacity: 0;
+    background: transparent;
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+}
+
+.edit-banner, .edit-client {
+    right: 80px;
+}
+
+.delete-banner i, .edit-banner i , .delete-client i , .edit-client i {
+    font-size: 20px;
+    color: #fff;
+}
+
+.banner-item:hover .delete-banner, .banner-item:hover .edit-banner, .client-item:hover .edit-client , .client-item:hover .delete-client {
+    opacity: 1 !important;
+    transition: 0.5s;
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .container-gallery_banner, .container-gallery_client {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .Navbar__Bar i, .Navbar__Options i {
+        margin-left: 13px;
+    }
+}
+
+@media only screen and (max-width: 998px) {
+    .container-new_banner .input input, .container-new_client .input input {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container-gallery_banner, .container-gallery_client {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .container-new_banner .input input, .container-new_client .input input {
+        width: 240px;
+    }
+    .Content {
+        padding: 60px 10px 10px 10px;
+    }
+    .Navbar__Bar i, .Navbar__Options i {
+        margin-left: 0px;
+    }
+    nav {
+        padding: 10px 10px 10px 10px;
+    }
+}
