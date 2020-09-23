@@ -25,30 +25,30 @@ const Services = () => {
         cssEase: "linear",
         responsive: [
             {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-              }
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
             },
             {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                initialSlide: 2
-              }
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-          ]
+        ]
     };
 
     return (
@@ -93,9 +93,9 @@ const Services = () => {
 
             <section className="Clients">
                 <h2>Confian en nosotros</h2>
-                <div className="Relative Background" style={{paddingTop: "340px"}}>
+                <div className="Relative Background" style={{ paddingTop: "340px" }}>
                     <Slider {...settingsClients} className="Clients__Slider">
-                        {
+                        {/* {
                             clients.map(client => (
 
                                 <div className="Image__Client" key={client._id}>
@@ -103,7 +103,22 @@ const Services = () => {
                                 </div>
 
                             ))
-                        }
+                        } */}
+                        <div className="Image__Client">
+                            <img src={require('../images/cliente1.png')} style={{ outline: "none" }} />
+                        </div>
+                        <div className="Image__Client">
+                            <img src={require('../images/cliente2.png')} style={{ outline: "none" }} />
+                        </div>
+                        <div className="Image__Client">
+                            <img src={require('../images/cliente3.png')} style={{ outline: "none" }} />
+                        </div>
+                        <div className="Image__Client">
+                            <img src={require('../images/cliente4.png')} style={{ outline: "none" }} />
+                        </div>
+                        <div className="Image__Client">
+                            <img src={require('../images/cliente5.png')} style={{ outline: "none" }} />
+                        </div>
                     </Slider>
                 </div>
             </section>

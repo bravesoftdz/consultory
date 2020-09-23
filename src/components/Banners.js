@@ -22,10 +22,10 @@ const Banners = () => {
         autoplaySpeed: 2000,
         cssEase: "linear",
     };
-    
+
     return (
         <Slider {...settings}>
-            {
+            {/* {
                 banners.map(banner => (
                     <div style={{ width: "100%", height: 'auto' }} key={banner._id}>
                         <div className="Banner" >
@@ -34,7 +34,26 @@ const Banners = () => {
                         </div>
                     </div>
                 ))
-            }
+            } */}
+            <div style={{ width: "100%", height: 'auto' }}>
+                <div className="Banner" >
+                    <img src={require('../images/banner1.png')} />
+                    <p>Mejoramos y fortalecemos tus sistemas de gestión
+                    </p>
+                </div>
+            </div><div style={{ width: "100%", height: 'auto' }}>
+                <div className="Banner" >
+                    <img src={require('../images/banner2.png')} />
+                    <p>Prevenimos riesgos y accidentes en tu empresa
+                    </p>
+                </div>
+            </div><div style={{ width: "100%", height: 'auto' }}>
+                <div className="Banner" >
+                    <img src={require('../images/banner3.png')} />
+                    <p>Creamos ambientes seguros y exitosos
+                    </p>
+                </div>
+            </div>
         </Slider>
     );
 }

@@ -177,6 +177,10 @@
   margin-bottom: 0px !important;
 }
 
+.Clients__Slider button {
+  display: none !important;
+}
+
 .Bg__Services {
   width: 100%;
   height: 25vh;
